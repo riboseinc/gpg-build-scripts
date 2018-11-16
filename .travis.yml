@@ -8,6 +8,9 @@ script:
 
 matrix:
   include:
+    # The "docker" example is the longest to run, therefore we start with it.
+    - env: SCRIPT="docker_images"
+      sudo: required
     - env: SCRIPT="all_latest"
       sudo: required
     - env: SCRIPT="all_head"
